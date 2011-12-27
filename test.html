@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <style>
+      a.test { font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <a href="http://jquery.com/">jQuery</a>
+    
+    <!--<script src="jquery-1.7.1.js"></script>-->
+    <!--<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" /> -->
+    <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+
+
+    <script>
+      $(document).ready(function(){
+        $("a").addClass("test");
+        $('a').click(function(event){
+          alert("Joop")
+          event.preventDefault();
+          $(this).hide("slow");
+        });
+
+        $("input#firstlast").autocomplete({
+          source: ["bloop", "dee", "dah", "apple", "orange", "cat", "ruby"]
+        });
+      })
+    </script>
+
+    <p>Test Autocomplete</p>
+    <p>
+      <input name="names" id="firstlast" type="text" autocomplete="off" />
+    </p>
+  </body>
+</html>
