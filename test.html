@@ -17,7 +17,8 @@
       $(document).ready(function(){
 
         $("input#firstlast").autocomplete({
-          source: ["bloop", "dee", "dah", "apple", "orange", "cat", "ruby"]
+          source: "periodic-list.php",
+          minLength: 2
         });
       })
     </script>
